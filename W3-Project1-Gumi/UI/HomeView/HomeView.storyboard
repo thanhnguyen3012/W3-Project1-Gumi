@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6Ga-KK-WBy">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="Mch-zc-I1C">
+            <objects>
+                <viewController id="6Ga-KK-WBy" customClass="HomeViewController" customModule="W3_Project1_Gumi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7HW-fs-2WI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="sOA-L7-083">
+                                <rect key="frame" x="10" y="44" width="394" height="818"/>
+                                <subviews>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aa9-1E-rez">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="3ZV-Mc-e9d"/>
+                                        </constraints>
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="6he-fm-EUK">
+                                            <size key="itemSize" width="128" height="128"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells/>
+                                    </collectionView>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="eaP-f7-KYI">
+                                        <rect key="frame" x="0.0" y="50" width="394" height="718"/>
+                                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="r9n-gE-afw">
+                                            <size key="itemSize" width="128" height="128"/>
+                                            <size key="headerReferenceSize" width="50" height="50"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells/>
+                                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="SrH-ag-gMR">
+                                            <rect key="frame" x="0.0" y="0.0" width="394" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionReusableView>
+                                    </collectionView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3bS-RY-Oo7">
+                                        <rect key="frame" x="0.0" y="768" width="394" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="b2y-i2-LNd"/>
+                                        </constraints>
+                                        <state key="normal" title="Filters"/>
+                                        <connections>
+                                            <action selector="showFiltersView:" destination="6Ga-KK-WBy" eventType="touchUpInside" id="pia-dP-BCL"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="aa9-1E-rez" secondAttribute="trailing" id="4xI-NV-RCV"/>
+                                    <constraint firstItem="eaP-f7-KYI" firstAttribute="top" secondItem="aa9-1E-rez" secondAttribute="bottom" id="OGA-Ox-UeE"/>
+                                    <constraint firstItem="aa9-1E-rez" firstAttribute="top" secondItem="sOA-L7-083" secondAttribute="top" id="dvz-62-hsG"/>
+                                    <constraint firstItem="aa9-1E-rez" firstAttribute="leading" secondItem="sOA-L7-083" secondAttribute="leading" id="jwO-6O-RmV"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Tac-Dg-d7y"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Tac-Dg-d7y" firstAttribute="bottom" secondItem="sOA-L7-083" secondAttribute="bottom" id="4iu-ww-ZTl"/>
+                            <constraint firstItem="sOA-L7-083" firstAttribute="leading" secondItem="Tac-Dg-d7y" secondAttribute="leading" constant="10" id="9uL-cd-yoy"/>
+                            <constraint firstItem="sOA-L7-083" firstAttribute="top" secondItem="Tac-Dg-d7y" secondAttribute="top" id="Fpc-2Q-cf2"/>
+                            <constraint firstItem="Tac-Dg-d7y" firstAttribute="trailing" secondItem="sOA-L7-083" secondAttribute="trailing" constant="10" id="fuN-LV-w2H"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="filtersButton" destination="3bS-RY-Oo7" id="Aum-kr-aqn"/>
+                        <outlet property="photosCollectionView" destination="eaP-f7-KYI" id="ZCG-PG-eMj"/>
+                        <outlet property="stackView" destination="sOA-L7-083" id="mX1-Bg-6aM"/>
+                        <outlet property="tagsCollectionView" destination="aa9-1E-rez" id="mH1-MQ-kc7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="50g-RP-Pxp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="72" y="100"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
