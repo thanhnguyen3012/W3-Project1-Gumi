@@ -124,15 +124,22 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         default: // photoCollectionView
             print("*****************  Section:\(indexPath.section)    Row:\(indexPath.row)")
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoCollectionViewCell.identifier, for: indexPath) as! PhotoCollectionViewCell
-            cell.bindData(photo: listOfPhoto[indexPath.row])
-            return cell
+            if listOfTagFilter.isEmpty {
+                cell.bindData(photo: listOfPhoto[indexPath.row])
+                return cell
+            } else {
+                // Chèn xử lý section chỗ này
+                return cell
+            }
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         switch collectionView {
         case photosCollectionView:
-            <#code#>
+            let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "SectionHeader", for: indexPath) as! SectionHeaderCollectionReusableView
+           sectionHeader.titleLabel.text = "Section \(indexPath.section)"
+           return sectionHeader
         default:
             return UICollectionReusableView()
         }
