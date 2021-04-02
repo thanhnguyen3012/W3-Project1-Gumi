@@ -7,11 +7,16 @@
 
 import UIKit
 
+protocol TagsViewControllerDelegate {
+    func tagsViewControllerDelege(_ tagsViewControllerDelegate: TagsViewController, passListOfFilter: [Int])
+//    func passListOfFilter(tags : [Int])
+}
+
 class TagsViewController: UIViewController {
 
     @IBOutlet weak var tagCollectionView: UICollectionView!
     
-    var delegate : FilterDelegate?
+    var delegate : TagsViewControllerDelegate?
     var listOfTag = [String]()
     var choosedList = [Bool]()
     
@@ -42,7 +47,8 @@ class TagsViewController: UIViewController {
                 resultList.append(i)
             }
         }
-        delegate?.passListOfFilter(tags: resultList)
+//        delegate?.passListOfFilter(tags: resultList)
+        delegate?.tagsViewControllerDelege(self, passListOfFilter: resultList)
         self.dismiss(animated: true, completion: nil)
     }
 }

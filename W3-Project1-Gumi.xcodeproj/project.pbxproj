@@ -23,7 +23,6 @@
 		840EDE912612DA4F00DA712D /* CustomFlowLayoutCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840EDE902612DA4F00DA712D /* CustomFlowLayoutCollectionView.swift */; };
 		840EDE962612FE2D00DA712D /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840EDE952612FE2C00DA712D /* UIImageExtension.swift */; };
 		840EDE9B2613332D00DA712D /* SectionHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840EDE992613332D00DA712D /* SectionHeaderCollectionReusableView.swift */; };
-		840EDE9C2613332D00DA712D /* SectionHeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840EDE9A2613332D00DA712D /* SectionHeaderCollectionReusableView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,7 +44,6 @@
 		840EDE902612DA4F00DA712D /* CustomFlowLayoutCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFlowLayoutCollectionView.swift; sourceTree = "<group>"; };
 		840EDE952612FE2C00DA712D /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		840EDE992613332D00DA712D /* SectionHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
-		840EDE9A2613332D00DA712D /* SectionHeaderCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionHeaderCollectionReusableView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,7 +165,6 @@
 			isa = PBXGroup;
 			children = (
 				840EDE992613332D00DA712D /* SectionHeaderCollectionReusableView.swift */,
-				840EDE9A2613332D00DA712D /* SectionHeaderCollectionReusableView.xib */,
 			);
 			path = SectionHeader;
 			sourceTree = "<group>";
@@ -230,7 +227,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				840EDE7A2612CBBA00DA712D /* TagsView.storyboard in Resources */,
-				840EDE9C2613332D00DA712D /* SectionHeaderCollectionReusableView.xib in Resources */,
 				840EDE862612D23100DA712D /* PhotoCollectionViewCell.xib in Resources */,
 				840EDE732612C9F200DA712D /* HomeView.storyboard in Resources */,
 				840EDE8D2612D25B00DA712D /* TagCollectionViewCell.xib in Resources */,
