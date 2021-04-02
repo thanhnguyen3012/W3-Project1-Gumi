@@ -20,7 +20,6 @@ class HomeViewController: UIViewController {
     var listOfAllPhoto = [ Photo(url: "https://picsum.photos/id/0/5616/3744", title: "Alejandro Escamilla", tag: Tag.ART),
                            Photo(url: "https://picsum.photos/id/1/5616/3744", title: "Alejandro Escamilla", tag: Tag.NATURAL),
                            Photo(url: "https://picsum.photos/id/100/2500/1656", title: "Tina Rataj", tag: Tag.ART),
-                           Photo(url: "https://picsum.photos/id/100/2500/1656", title: "Tina Rataj", tag: Tag.ART),
                            Photo(url: "https://picsum.photos/id/1000/5626/3635", title: "Lukas Budimaier", tag: Tag.FOOD),
                            Photo(url: "https://picsum.photos/id/1001/5616/3744", title: "Danielle MacInnes", tag: Tag.FASHION),
                            Photo(url: "https://picsum.photos/id/1002/4312/2868", title: "NASA", tag: Tag.UNDEFINED),
@@ -80,9 +79,7 @@ class HomeViewController: UIViewController {
     func countItemsForTag(tag: Int, inList: [Photo]) -> Int { // Counting in listOfPhoto[]
         var counter = 0
         for photo in inList {
-            if photo.tag == Tag(rawValue: tag){
-                counter += 1
-            }
+            counter += (photo.tag == Tag(rawValue: tag)) ? 1 : 0
         }
         return counter
     }
@@ -171,9 +168,11 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
                 return cell
             } else {
                 var index = 0
-                for i in 0..<(listOfTagFilter.count - 1) {
+//                for i in 0..<(listOfTagFilter.count - 1) {
+                for i in 0..<(indexPath.section) {
                     index += countItemsForTag(tag: listOfTagFilter[i], inList: listOfPhoto)
                 }
+                print("OOOOOOOOOOOOOOOOOOOOO \(index) of section \(indexPath.section) -> \(indexPath.row)")
                 cell.bindData(photo: listOfPhoto[indexPath.row + index])
                 return cell
             }
