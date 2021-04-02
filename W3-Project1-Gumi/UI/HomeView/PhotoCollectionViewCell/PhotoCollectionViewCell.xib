@@ -11,29 +11,29 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="PhotoCollectionViewCell" customModule="W3_Project1_Gumi" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="465" height="351"/>
+            <rect key="frame" x="0.0" y="0.0" width="444" height="335"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="465" height="351"/>
+                <rect key="frame" x="0.0" y="0.0" width="444" height="335"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6FI-7D-34g">
-                        <rect key="frame" x="0.0" y="0.0" width="465" height="351"/>
+                        <rect key="frame" x="0.0" y="0.0" width="444" height="335"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3Y3-mt-tUg">
-                                <rect key="frame" x="0.0" y="0.0" width="465" height="261.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="444" height="249.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="3Y3-mt-tUg" secondAttribute="height" multiplier="16:9" id="v94-Z9-l1k"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TAG" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qf9-8J-3gR">
-                                <rect key="frame" x="0.0" y="305.5" width="28" height="18"/>
+                                <rect key="frame" x="416" y="276" width="28" height="18"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                 <color key="textColor" systemColor="systemGrayColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aO5-6H-mMg">
-                                <rect key="frame" x="0.0" y="271.5" width="42" height="24"/>
+                                <rect key="frame" x="0.0" y="254.5" width="42" height="60.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -42,13 +42,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="3Y3-mt-tUg" firstAttribute="leading" secondItem="6FI-7D-34g" secondAttribute="leading" id="07g-wB-1rL"/>
+                            <constraint firstAttribute="trailing" secondItem="Qf9-8J-3gR" secondAttribute="trailing" id="2D4-aI-oRm"/>
                             <constraint firstItem="aO5-6H-mMg" firstAttribute="leading" secondItem="6FI-7D-34g" secondAttribute="leading" id="2Pv-J1-SYg"/>
                             <constraint firstAttribute="width" secondItem="6FI-7D-34g" secondAttribute="height" multiplier="155:117" id="4dw-5w-TTj"/>
-                            <constraint firstItem="Qf9-8J-3gR" firstAttribute="top" secondItem="aO5-6H-mMg" secondAttribute="bottom" constant="10" id="9I2-BT-5Q2"/>
-                            <constraint firstItem="Qf9-8J-3gR" firstAttribute="leading" secondItem="6FI-7D-34g" secondAttribute="leading" id="FiP-zc-Vgb"/>
                             <constraint firstAttribute="trailing" secondItem="3Y3-mt-tUg" secondAttribute="trailing" id="H6D-fw-fde"/>
+                            <constraint firstAttribute="bottom" secondItem="aO5-6H-mMg" secondAttribute="bottom" constant="20" id="Iva-lb-Zjs"/>
+                            <constraint firstItem="Qf9-8J-3gR" firstAttribute="centerY" secondItem="aO5-6H-mMg" secondAttribute="centerY" id="Soc-QI-7gw"/>
                             <constraint firstItem="3Y3-mt-tUg" firstAttribute="top" secondItem="6FI-7D-34g" secondAttribute="top" id="U4W-we-h3T"/>
-                            <constraint firstItem="aO5-6H-mMg" firstAttribute="top" secondItem="3Y3-mt-tUg" secondAttribute="bottom" constant="10" id="a1B-ST-vZq"/>
+                            <constraint firstItem="aO5-6H-mMg" firstAttribute="top" secondItem="3Y3-mt-tUg" secondAttribute="bottom" constant="5" id="a1B-ST-vZq"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -60,13 +61,13 @@
                 <constraint firstAttribute="bottom" secondItem="6FI-7D-34g" secondAttribute="bottom" id="fGv-Gf-gwR"/>
                 <constraint firstItem="6FI-7D-34g" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="zMN-JQ-XOG"/>
             </constraints>
-            <size key="customSize" width="465" height="351"/>
+            <size key="customSize" width="444" height="335"/>
             <connections>
                 <outlet property="imageView" destination="3Y3-mt-tUg" id="iL3-Nt-bSH"/>
                 <outlet property="tagLabel" destination="Qf9-8J-3gR" id="Bjx-6B-BmL"/>
                 <outlet property="titleLabel" destination="aO5-6H-mMg" id="aCV-oc-G41"/>
             </connections>
-            <point key="canvasLocation" x="325.36231884057975" y="208.59375"/>
+            <point key="canvasLocation" x="310.14492753623193" y="203.23660714285714"/>
         </collectionViewCell>
     </objects>
     <resources>
